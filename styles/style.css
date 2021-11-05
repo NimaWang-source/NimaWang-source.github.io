@@ -27,6 +27,7 @@ body {
 	max-width: 35ch;
 	border-radius: 1rem;
 	overflow: hidden;
+	margin-top: 150px;
 
 	transition: transform 500ms ease;
 }
