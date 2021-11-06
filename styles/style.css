@@ -54,18 +54,23 @@ body {
 	height: 60ch;
 	width: 90ch;
 }
+@media (max-width: 120ch) {
+	.section3 .card {
+		height: 60ch;
+		width: 40ch;
+	}
+}
 /* card background */
 
 .card:hover,
 .card:focus-within {
 	transform: scale(1.05);
-	/* box-shadow: 3px 3px 5px hsla(0, 0%, 33%, 0.568); */
 }
 
 .card-content {
-	margin-top: 280px;
 	--padding: 1.5rem;
-	min-height: 300px;
+	height: 300px;
+	transform: translateY(52%);
 }
 
 .section1 .card-content,
@@ -90,11 +95,12 @@ body {
 @media (hover) {
 	.card-content {
 		transition: transform 500ms ease;
+		transform: translateY(105%);
 	}
 
 	.card:hover .card-content,
 	.card:focus-within .card-content {
-		transform: translateY(-50%);
+		transform: translateY(52%);
 		transition-delay: 500ms;
 	}
 
