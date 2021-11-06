@@ -12,12 +12,28 @@
 
 body {
 	display: flex;
-	min-height: 100vh;
 	line-height: 1.6;
 	background: var(--clr-neutral-900);
 	font-family: 'Open Sans', sans-serif;
 	flex-wrap: wrap;
 	justify-content: center;
+}
+
+.section1 {
+	display: flex;
+	order: 0;
+}
+.section2 {
+	display: flex;
+	order: 5;
+}
+.section3 {
+	display: flex;
+	order: 25;
+}
+.section4 {
+	display: flex;
+	order: -1;
 }
 
 .card {
@@ -61,7 +77,13 @@ body {
 	height: 60ch;
 	width: 90ch;
 }
-@media (min-width: 451px) and (max-width: 964px) {
+.section4 .card {
+	background-image: url(../images/photo-5.jpg);
+	height: 60ch;
+	width: 90ch;
+	background-position-y: 50%;
+}
+@media (min-width: 451px) and (max-width: 949px) {
 	.section3 .card {
 		height: 60ch;
 		width: 40ch;
@@ -69,6 +91,10 @@ body {
 	}
 	.section3 p {
 		width: 100%;
+	}
+	.section4 .card {
+		width: 40ch;
+		height: 26.7ch;
 	}
 }
 @media (max-width: 450px) {
@@ -91,6 +117,10 @@ body {
 	}
 	.section3 p {
 		width: 100%;
+	}
+	.section4 .card {
+		width: 90vw;
+		height: 60vw;
 	}
 }
 @media (max-width: 450px) and (not (hover)) {
