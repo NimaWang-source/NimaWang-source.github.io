@@ -13,7 +13,7 @@
 body {
 	display: flex;
 	line-height: 1.6;
-	background: var(--clr-neutral-900);
+	background: var(--clr-neutral-100);
 	font-family: 'Open Sans', sans-serif;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -148,7 +148,6 @@ body {
 .section1 .card-content {
 	--padding: 1.5rem;
 	height: auto;
-	transform: translateY(-5%);
 }
 
 .section1 .card-content,
@@ -170,13 +169,18 @@ body {
 	);
 }
 
+@media (max-width: 949) {
+	.section1 .card .card-content {
+		transform: translateY(60%);
+	}
+}
 @media (hover) {
 	.card-content {
 		transition: transform 500ms ease;
 		transform: translateY(70%);
 	}
 	.section1 .card .card-content {
-		transform: translateY(70%);
+		transform: translateY(67%);
 	}
 
 	.card:hover .card-content,
