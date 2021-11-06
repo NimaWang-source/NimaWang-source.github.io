@@ -1,5 +1,5 @@
 :root {
-	--clr-neutral-900: hsl(210, 9%, 17%);
+	--clr-neutral-900: hsl(210, 5%, 8%);
 	--clr-neutral-100: hsl(0, 0%, 100%);
 	--clr-accent-400: hsl(142, 90%, 61%);
 }
@@ -11,18 +11,13 @@
 }
 
 body {
-	display: grid;
+	display: flex;
 	min-height: 100vh;
 	line-height: 1.6;
 	background: var(--clr-neutral-900);
-	font-family: sans-serif;
-}
-
-.whole_content {
-	display: flex;
+	font-family: 'Open Sans', sans-serif;
 	flex-wrap: wrap;
-	width: auto;
-	margin: 0px auto;
+	justify-content: center;
 }
 
 .card {
@@ -33,7 +28,7 @@ body {
 	border-radius: 1rem;
 	overflow: hidden;
 	margin: 50px 50px 50px 50px;
-	transition: transform 500ms ease, box-shadow 560ms ease;
+	transition: transform 200ms ease;
 }
 
 .section1,
@@ -64,11 +59,17 @@ body {
 .card:hover,
 .card:focus-within {
 	transform: scale(1.05);
-	box-shadow: 5px 5px 10px hsl(0, 0%, 33%);
+	/* box-shadow: 3px 3px 5px hsla(0, 0%, 33%, 0.568); */
 }
 
 .card-content {
+	margin-top: 280px;
 	--padding: 1.5rem;
+	min-height: 300px;
+}
+
+.section1 .card-content,
+.section3 .card-content {
 	padding: var(--padding);
 	background: linear-gradient(
 		hsl(0 0% 0% / 0),
@@ -77,15 +78,23 @@ body {
 	);
 }
 
+.section2 .card-content {
+	padding: var(--padding);
+	background: linear-gradient(
+		hsl(0 0% 100%/ 0),
+		hsl(0 0% 100%/ 0.3) 20%,
+		hsl(0 0% 100%/ 1)
+	);
+}
+
 @media (hover) {
 	.card-content {
-		transform: translateY(65%);
 		transition: transform 500ms ease;
 	}
 
 	.card:hover .card-content,
 	.card:focus-within .card-content {
-		transform: translateY(0);
+		transform: translateY(-50%);
 		transition-delay: 500ms;
 	}
 
@@ -115,6 +124,10 @@ body {
 .card-title {
 	position: relative;
 	width: max-content;
+}
+
+.section2 .card-title {
+	color: hsl(0, 0%, 18%);
 }
 
 .card-title::after {
