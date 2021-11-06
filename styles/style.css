@@ -101,7 +101,7 @@ body {
 	);
 }
 
-@media (hover) {
+@media (hover) and (max-width: 450px) {
 	.card-content {
 		transition: transform 500ms ease;
 		transform: translateY(105%);
