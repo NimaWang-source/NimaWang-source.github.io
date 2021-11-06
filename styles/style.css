@@ -80,7 +80,7 @@ body {
 		background-position-x: 68%;
 	}
 	.card-content {
-		transform: translateY(22vw);
+		transform: translateY(22vw) !important;
 	}
 	.section1 .card-content {
 		transform: translateY(10vw) !important;
