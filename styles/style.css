@@ -48,6 +48,10 @@ body {
 	flex-wrap: wrap;
 }
 
+.section3 p {
+	width: 42%;
+}
+
 /* card background */
 .section1 .card {
 	background-image: url(../images/photo-3.jpg);
@@ -70,6 +74,9 @@ body {
 		width: 40ch;
 		background-position-x: 68%;
 	}
+	.section3 p {
+		width: 100%;
+	}
 }
 @media (max-width: 450px) {
 	.section1 .card,
@@ -77,16 +84,26 @@ body {
 	.section3 .card {
 		height: 120vw;
 		width: 80vw;
+	}
+	.section3 .card {
 		background-position-x: 68%;
-	}
-	.card-content {
-		transform: translateY(22vw) !important;
-	}
-	.section1 .card-content {
-		transform: translateY(10vw) !important;
 	}
 	body {
 		font-size: 4vw;
+	}
+	.section1 .card .profile {
+		width: 50vw;
+		height: 50vw;
+	}
+	.section1 .card .card-content {
+		transform: translateY(-25%);
+	}
+	.section2 .card-content,
+	.section3 .card-content {
+		transform: translateY(20%);
+	}
+	.section3 p {
+		width: 100%;
 	}
 }
 
