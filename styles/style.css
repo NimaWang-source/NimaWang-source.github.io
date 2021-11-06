@@ -31,6 +31,16 @@ body {
 	transition: transform 200ms ease;
 }
 
+.profile {
+	background-image: url(../images/me.jpg);
+	background-size: cover;
+	background-position: 56% 0;
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	margin: 0px auto;
+}
+
 .section1,
 .section2,
 .section3 {
@@ -70,7 +80,10 @@ body {
 		background-position-x: 68%;
 	}
 	.card-content {
-		transform: translateY(22vw) !important;
+		transform: translateY(22vw);
+	}
+	.section1 .card-content {
+		transform: translateY(10vw) !important;
 	}
 	body {
 		font-size: 4vw;
@@ -87,6 +100,11 @@ body {
 	--padding: 1.5rem;
 	height: 300px;
 	transform: translateY(52%);
+}
+
+.section1 .card-content {
+	height: auto;
+	transform: translateY(-5%);
 }
 
 .section1 .card-content,
@@ -113,10 +131,18 @@ body {
 		transition: transform 500ms ease;
 		transform: translateY(105%);
 	}
+	.section1 .card-content {
+		transform: translateY(70%);
+	}
 
 	.card:hover .card-content,
 	.card:focus-within .card-content {
 		transform: translateY(52%);
+		transition-delay: 500ms;
+	}
+
+	.section1 .card:hover .card-content {
+		transform: translateY(-5%);
 		transition-delay: 500ms;
 	}
 
