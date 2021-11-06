@@ -13,7 +13,7 @@
 body {
 	display: flex;
 	line-height: 1.6;
-	background: var(--clr-neutral-100);
+	background: var(--clr-neutral-900);
 	font-family: 'Open Sans', sans-serif;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -38,7 +38,7 @@ body {
 
 .card {
 	display: grid;
-	color: var(--clr-neutral-900);
+	color: var(--clr-neutral-100);
 	background-size: cover;
 	padding: 8rem 0 0;
 	border-radius: 1rem;
