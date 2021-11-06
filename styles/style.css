@@ -89,6 +89,11 @@ body {
 		width: 50vw;
 		height: 50vw;
 	}
+	.section3 p {
+		width: 100%;
+	}
+}
+@media (max-width: 450px) and (not (hover)) {
 	.section1 .card .card-content {
 		transform: translateY(-25%);
 	}
@@ -96,9 +101,6 @@ body {
 	.section3 .card-content {
 		transform: translateY(0);
 		height: auto;
-	}
-	.section3 p {
-		width: 100%;
 	}
 }
 
