@@ -100,7 +100,8 @@ body {
 	}
 	.section2 .card-content,
 	.section3 .card-content {
-		transform: translateY(37%);
+		transform: translateY(0);
+		height: auto;
 	}
 	.section3 p {
 		width: 100%;
@@ -143,7 +144,7 @@ body {
 	);
 }
 
-@media (hover) and (min-width: 964px) {
+@media (hover) {
 	.card-content {
 		transition: transform 500ms ease;
 		transform: translateY(105%);
