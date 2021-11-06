@@ -68,6 +68,12 @@ body {
 		height: 120vw;
 		width: 80vw;
 	}
+	.card-content {
+		transform: translateY(22vw) !important;
+	}
+	body {
+		font-size: 4vw;
+	}
 }
 
 /* card background */
@@ -101,7 +107,7 @@ body {
 	);
 }
 
-@media (hover) and (min-width: 947px) {
+@media (hover) and (min-width: 1081px) {
 	.card-content {
 		transition: transform 500ms ease;
 		transform: translateY(105%);
