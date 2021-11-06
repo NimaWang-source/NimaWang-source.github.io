@@ -112,11 +112,11 @@ body {
 
 .card-content {
 	--padding: 1.5rem;
-	height: 300px;
-	transform: translateY(52%);
+	transform: translateY(30%);
 }
 
 .section1 .card-content {
+	--padding: 1.5rem;
 	height: auto;
 	transform: translateY(-5%);
 }
@@ -143,15 +143,15 @@ body {
 @media (hover) {
 	.card-content {
 		transition: transform 500ms ease;
-		transform: translateY(105%);
+		transform: translateY(70%);
 	}
-	.section1 .card-content {
+	.section1 .card .card-content {
 		transform: translateY(70%);
 	}
 
 	.card:hover .card-content,
 	.card:focus-within .card-content {
-		transform: translateY(52%);
+		transform: translateY(20%);
 		transition-delay: 500ms;
 	}
 
