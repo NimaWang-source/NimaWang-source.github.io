@@ -54,14 +54,23 @@ body {
 	height: 60ch;
 	width: 90ch;
 }
-@media (max-width: 120ch) {
+@media (min-width: 451px) and (max-width: 947px) {
 	.section3 .card {
 		height: 60ch;
 		width: 40ch;
+		background-position-x: 68%;
 	}
 }
-/* card background */
+@media (max-width: 450px) {
+	.section1 .card,
+	.section2 .card,
+	.section3 .card {
+		height: 120vw;
+		width: 80vw;
+	}
+}
 
+/* card background */
 .card:hover,
 .card:focus-within {
 	transform: scale(1.05);
