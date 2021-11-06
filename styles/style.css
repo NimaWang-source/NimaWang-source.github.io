@@ -68,7 +68,7 @@ body {
 	height: 60ch;
 	width: 90ch;
 }
-@media (min-width: 451px) and (max-width: 947px) {
+@media (min-width: 451px) and (max-width: 964px) {
 	.section3 .card {
 		height: 60ch;
 		width: 40ch;
@@ -143,7 +143,7 @@ body {
 	);
 }
 
-@media (hover) and (min-width: 1081px) {
+@media (hover) and (min-width: 949px) {
 	.card-content {
 		transition: transform 500ms ease;
 		transform: translateY(105%);
