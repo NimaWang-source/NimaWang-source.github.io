@@ -67,6 +67,7 @@ body {
 	.section3 .card {
 		height: 120vw;
 		width: 80vw;
+		background-position-x: 68%;
 	}
 	.card-content {
 		transform: translateY(22vw) !important;
