@@ -1,5 +1,5 @@
 :root {
-	--clr-neutral-900: hsl(207, 19%, 9%);
+	--clr-neutral-900: hsl(210, 9%, 17%);
 	--clr-neutral-100: hsl(0, 0%, 100%);
 	--clr-accent-400: hsl(142, 90%, 61%);
 }
@@ -13,28 +13,58 @@
 body {
 	display: grid;
 	min-height: 100vh;
-	place-items: center;
 	line-height: 1.6;
 	background: var(--clr-neutral-900);
 	font-family: sans-serif;
 }
 
+.whole_content {
+	display: flex;
+	flex-wrap: wrap;
+	width: auto;
+	margin: 0px auto;
+}
+
 .card {
+	display: grid;
 	color: var(--clr-neutral-100);
-	background-image: url('../images/photo-3.jpg');
 	background-size: cover;
 	padding: 8rem 0 0;
-	max-width: 35ch;
 	border-radius: 1rem;
 	overflow: hidden;
-	margin-top: 150px;
-
-	transition: transform 500ms ease;
+	margin: 50px 50px 50px 50px;
+	transition: transform 500ms ease, box-shadow 560ms ease;
 }
+
+.section1,
+.section2,
+.section3 {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* card background */
+.section1 .card {
+	background-image: url(../images/photo-3.jpg);
+	height: 60ch;
+	width: 40ch;
+}
+.section2 .card {
+	background-image: url(../images/photo-4.jpg);
+	height: 60ch;
+	width: 40ch;
+}
+.section3 .card {
+	background-image: url(../images/photo-2.jpg);
+	height: 60ch;
+	width: 90ch;
+}
+/* card background */
 
 .card:hover,
 .card:focus-within {
 	transform: scale(1.05);
+	box-shadow: 5px 5px 10px hsl(0, 0%, 33%);
 }
 
 .card-content {
@@ -110,12 +140,15 @@ body {
 
 .button {
 	cursor: pointer;
-	display: inline;
+	display: grid;
+	width: 8.4em;
+	text-align: center;
 	text-decoration: none;
 	color: var(--clr-neutral-900);
 	background-color: var(--clr-accent-400);
 	padding: 0.5em 1.25em;
 	border-radius: 0.25em;
+	margin-bottom: 0.5em;
 }
 
 .button:hover,
