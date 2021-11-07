@@ -11,12 +11,14 @@
 }
 
 body {
+	margin: 0px auto;
 	display: flex;
 	line-height: 1.6;
 	background: var(--clr-neutral-900);
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Noto Sans TC', sans-serif;
 	flex-wrap: wrap;
 	justify-content: center;
+	max-width: 1400px;
 }
 
 .section1 {
@@ -83,7 +85,7 @@ body {
 	width: 90ch;
 	background-position-y: 50%;
 }
-@media (min-width: 451px) and (max-width: 949px) {
+@media (min-width: 451px) and (max-width: 927px) {
 	.section3 .card {
 		height: 60ch;
 		width: 40ch;
@@ -169,7 +171,7 @@ body {
 	);
 }
 
-@media (max-width: 949) {
+@media (max-width: 927) {
 	.section1 .card .card-content {
 		transform: translateY(58%);
 	}
