@@ -188,12 +188,10 @@ body {
 	.card:hover .card-content,
 	.card:focus-within .card-content {
 		transform: translateY(20%);
-		transition-delay: 500ms;
 	}
 
 	.section1 .card:hover .card-content {
 		transform: translateY(-5%);
-		transition-delay: 500ms;
 	}
 
 	.card:focus-within .card-content {
@@ -207,7 +205,7 @@ body {
 
 	.card:hover .card-content > *:not(.card-title) {
 		opacity: 1;
-		transition-delay: 1000ms;
+		transition-delay: 500ms;
 	}
 
 	.card:focus-within .card-content > *:not(.card-title) {
@@ -232,7 +230,7 @@ body {
 	content: '';
 	position: absolute;
 	left: calc(var(--padding) * -1);
-	bottom: 0;
+	bottom: -5px;
 	height: 4px;
 	width: calc(100% +var(--padding));
 	background: var(--clr-accent-400);
