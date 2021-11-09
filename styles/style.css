@@ -144,12 +144,12 @@ body {
 
 .card-content {
 	--padding: 1.5rem;
-	transform: translateY(30%);
+	transform: translateY(15%);
 }
 
 .section1 .card-content {
-	--padding: 1.5rem;
 	height: auto;
+	transform: translateY(-8%);
 }
 
 .section1 .card-content,
@@ -274,5 +274,11 @@ body {
 		transition-duration: 0.01ms !important;
 		transition-delay: 0ms !important;
 		scroll-behavior: auto !important;
+	}
+}
+
+@media not(hover) {
+	.section1 .card-content {
+		transform: translateY(-5%) !important;
 	}
 }
