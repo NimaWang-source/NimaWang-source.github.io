@@ -56,7 +56,7 @@ const init = () => {
 	getCameraStream(video);
 	getFrameFromVideo(output, video, canvas);
 	// app.appendChild(video);
-	app.appendChild(canvas);
+	// app.appendChild(canvas);
 	app.appendChild(output);
 	console.log('init');
 };
