@@ -74,6 +74,8 @@ const sketch = (output, width, height, video) => {
 	const videoData = videoContext.getImageData(90, 0, 540, 540).data;
 	console.log(videoData);
 
+	const fontFamily = 'serif';
+
 	for (let i = 0; i < numCells; i++) {
 		const col = i % cols;
 		const row = Math.floor(i / cols);
@@ -141,6 +143,9 @@ const rgbToHex = (r, g, b) => {
 const getGlyph = v => {
 	const glyph1 = '._+';
 	const glyph2 = '_=/#';
+	if (v < 50) return '';
+	if (v < 150) return glyph1[Math.floor(Math.random() * glyph1.length)];
+	return glyph2[Math.floor(Math.random() * glyph2.length)];
 };
 
 document.getElementById('app').onload = init();
