@@ -65,14 +65,13 @@ const sketch = (output, width, height, video) => {
 	const context = output.getContext('2d');
 	context.clearRect(0, 0, 1080, 1080);
 
-	const cell = 18;
+	const cell = 24;
 	const cols = Math.floor(width / cell);
 	const rows = Math.floor(height / cell);
 	const numCells = cols * rows;
 	const videoContext = video.getContext('2d');
 
 	const videoData = videoContext.getImageData(90, 0, 540, 540).data;
-	console.log(videoData);
 
 	const fontFamily = 'serif';
 
@@ -116,10 +115,10 @@ const sketch = (output, width, height, video) => {
 		// 	context.fillStyle = 'green';
 		// }
 
-		context.font = `${(cell * r * 1.5) / 256}px ${fontFamily}`;
-		// if (Math.random() > 0.9) {
-		// 	context.font = `${(cell * 4 * r) / 256}px ${fontFamily}`;
-		// }
+		context.font = `${(cell * r * 2) / 256}px ${fontFamily}`;
+		if (Math.random() > 0.99) {
+			context.font = `${(cell * 3.5 * r) / 256}px ${fontFamily}`;
+		}
 		context.fillText(glyph, 0, 0);
 
 		context.restore();
