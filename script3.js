@@ -56,7 +56,7 @@ const init = () => {
 	getCameraStream(video);
 	getFrameFromVideo(output, video, canvas);
 	// app.appendChild(video);
-	// app.appendChild(canvas);
+	app.appendChild(canvas);
 	app.appendChild(output);
 	console.log('init');
 };
@@ -102,30 +102,25 @@ const sketch = (output, width, height, video) => {
 				] *
 					0.114
 		);
+		const glyph = getGlyph(r);
 		context.save();
 		context.translate(x, y);
 		context.translate(cell * 0.5, cell * 0.5);
 
 		context.beginPath();
-
-		// context.fillStyle = rgbToHex(
-		// 	videoData[
-		// 		(row * (cell / 2) * cols * (cell / 2) + col * (cell / 2)) * 4 +
-		// 			0
-		// 	],
-		// 	videoData[
-		// 		(row * (cell / 2) * cols * (cell / 2) + col * (cell / 2)) * 4 +
-		// 			1
-		// 	],
-		// 	videoData[
-		// 		(row * (cell / 2) * cols * (cell / 2) + col * (cell / 2)) * 4 +
-		// 			2
-		// 	]
-		// );
 		context.fillStyle = 'white';
+		// if (Math.random() < 0.36) {
+		// 	context.fillStyle = 'red';
+		// }
+		// if (Math.random() < 0.33) {
+		// 	context.fillStyle = 'green';
+		// }
 
-		context.arc(0, 0, (cell * 0.5 * r) / 256, 0, Math.PI * 2);
-		context.fill();
+		context.font = `${(cell * r * 1.5) / 256}px ${fontFamily}`;
+		// if (Math.random() > 0.9) {
+		// 	context.font = `${(cell * 4 * r) / 256}px ${fontFamily}`;
+		// }
+		context.fillText(glyph, 0, 0);
 
 		context.restore();
 	}
@@ -141,11 +136,14 @@ const rgbToHex = (r, g, b) => {
 };
 
 const getGlyph = v => {
-	const glyph1 = '._+';
-	const glyph2 = '_=/#';
-	if (v < 50) return '';
-	if (v < 150) return glyph1[Math.floor(Math.random() * glyph1.length)];
-	return glyph2[Math.floor(Math.random() * glyph2.length)];
+	if (v <= 30) return '';
+	if (Math.random() < 0.9) {
+		return '.,-~:;=!*/#$'[Math.floor(((v - 31) * 12) / 225)];
+	}
+	if (Math.random() < 0.08) {
+		return 'Hi';
+	}
+	return '_-+/'[Math.floor(Math.random() * 4)];
 };
 
 document.getElementById('app').onload = init();
