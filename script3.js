@@ -12,11 +12,6 @@ const getFrameFromVideo = (output, video, canvas) => {
 	ctx.translate(video.width, 0);
 	ctx.scale(-1, 1);
 	ctx.drawImage(video, 0, 0, video.width, video.height);
-	// ctx.beginPath();
-	// ctx.lineWidth = 5;
-	// ctx.strokeStyle = 'white';
-	// ctx.rect(90, 0, 540, 540);
-	// ctx.stroke();
 	ctx.restore();
 	sketch(output, 1080, 1080, canvas);
 	requestAnimationFrame(() => getFrameFromVideo(output, video, canvas));
@@ -55,8 +50,6 @@ const init = () => {
 	const app = document.getElementById('app');
 	getCameraStream(video);
 	getFrameFromVideo(output, video, canvas);
-	// app.appendChild(video);
-	// app.appendChild(canvas);
 	app.appendChild(output);
 	console.log('init');
 };
@@ -131,14 +124,8 @@ const rgbToHex = (r, g, b) => {
 const getGlyph = v => {
 	if (v <= 30) return '';
 	if (Math.random() < 0.9) {
-		return '.,-~:;=!*/#'[Math.floor(((v - 31) * 11) / 225)];
+		return '.,-~:;+=!*/#'[Math.floor(((v - 31) * 12) / 225)];
 	}
-	// if (Math.random() < 0.03) {
-	// 	return '01';
-	// }
-	// if (Math.random() < 0.04) {
-	// 	return '00';
-	// }
 	return '_-+/'[Math.floor(Math.random() * 4)];
 };
 

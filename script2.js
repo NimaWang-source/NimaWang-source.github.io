@@ -12,11 +12,6 @@ const getFrameFromVideo = (output, video, canvas) => {
 	ctx.translate(video.width, 0);
 	ctx.scale(-1, 1);
 	ctx.drawImage(video, 0, 0, video.width, video.height);
-	// ctx.beginPath();
-	// ctx.lineWidth = 5;
-	// ctx.strokeStyle = 'white';
-	// ctx.rect(90, 0, 540, 540);
-	// ctx.stroke();
 	ctx.restore();
 	sketch(output, 1080, 1080, canvas);
 	requestAnimationFrame(() => getFrameFromVideo(output, video, canvas));
@@ -55,8 +50,6 @@ const init = () => {
 	const app = document.getElementById('app');
 	getCameraStream(video);
 	getFrameFromVideo(output, video, canvas);
-	// app.appendChild(video);
-	// app.appendChild(canvas);
 	app.appendChild(output);
 	console.log('init');
 };
@@ -104,21 +97,6 @@ const sketch = (output, width, height, video) => {
 		context.translate(cell * 0.5, cell * 0.5);
 
 		context.beginPath();
-
-		// context.fillStyle = rgbToHex(
-		// 	videoData[
-		// 		(row * (cell / 2) * cols * (cell / 2) + col * (cell / 2)) * 4 +
-		// 			0
-		// 	],
-		// 	videoData[
-		// 		(row * (cell / 2) * cols * (cell / 2) + col * (cell / 2)) * 4 +
-		// 			1
-		// 	],
-		// 	videoData[
-		// 		(row * (cell / 2) * cols * (cell / 2) + col * (cell / 2)) * 4 +
-		// 			2
-		// 	]
-		// );
 		context.fillStyle = 'white';
 
 		context.arc(0, 0, (cell * 0.5 * r) / 256, 0, Math.PI * 2);
@@ -135,11 +113,6 @@ const componentToHex = c => {
 
 const rgbToHex = (r, g, b) => {
 	return '#' + componentToHex(r) + componentToHex(g) + componentToHex(b);
-};
-
-const getGlyph = v => {
-	const glyph1 = '._+';
-	const glyph2 = '_=/#';
 };
 
 document.getElementById('app').onload = init();

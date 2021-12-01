@@ -123,9 +123,4 @@ const rgbToHex = (r, g, b) => {
 	return '#' + componentToHex(r) + componentToHex(g) + componentToHex(b);
 };
 
-const getGlyph = v => {
-	const glyph1 = '._+';
-	const glyph2 = '_=/#';
-};
-
 document.getElementById('app').onload = init();
