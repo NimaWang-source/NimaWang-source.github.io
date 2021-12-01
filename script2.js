@@ -72,7 +72,6 @@ const sketch = (output, width, height, video) => {
 	const videoContext = video.getContext('2d');
 
 	const videoData = videoContext.getImageData(90, 0, 540, 540).data;
-	console.log(videoData);
 
 	for (let i = 0; i < numCells; i++) {
 		const col = i % cols;

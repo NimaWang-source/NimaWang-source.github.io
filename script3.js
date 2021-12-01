@@ -108,12 +108,6 @@ const sketch = (output, width, height, video) => {
 
 		context.beginPath();
 		context.fillStyle = 'white';
-		// if (Math.random() < 0.36) {
-		// 	context.fillStyle = 'red';
-		// }
-		// if (Math.random() < 0.33) {
-		// 	context.fillStyle = 'green';
-		// }
 
 		context.font = `${(cell * r * 2) / 256}px ${fontFamily}`;
 		if (Math.random() > 0.99) {
@@ -137,11 +131,14 @@ const rgbToHex = (r, g, b) => {
 const getGlyph = v => {
 	if (v <= 30) return '';
 	if (Math.random() < 0.9) {
-		return '.,-~:;=!*/#$'[Math.floor(((v - 31) * 12) / 225)];
+		return '.,-~:;=!*/#'[Math.floor(((v - 31) * 11) / 225)];
 	}
-	if (Math.random() < 0.08) {
-		return 'Hi';
-	}
+	// if (Math.random() < 0.03) {
+	// 	return '01';
+	// }
+	// if (Math.random() < 0.04) {
+	// 	return '00';
+	// }
 	return '_-+/'[Math.floor(Math.random() * 4)];
 };
 
