@@ -115,6 +115,13 @@ video {
 		width: 40ch;
 		height: 26.7ch;
 	}
+	.section5 .card {
+		width: 40ch;
+		height: 26.7ch;
+	}
+	video {
+		transform: translateY(-55%);
+	}
 }
 @media (max-width: 450px) {
 	.section1 .card,
@@ -140,6 +147,13 @@ video {
 	.section4 .card {
 		width: 90vw;
 		height: 60vw;
+	}
+	.section5 .card {
+		width: 90vw;
+		height: 60vw;
+	}
+	video {
+		transform: translateY(-55%);
 	}
 }
 @media (max-width: 450px) and (not (hover)) {
