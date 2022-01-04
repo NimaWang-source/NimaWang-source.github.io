@@ -21,6 +21,14 @@ body {
 	max-width: 1400px;
 }
 
+video {
+	width: 100%;
+	height: auto;
+	max-height: 100%;
+	position: relative;
+	transform: translateY(-18%);
+}
+
 .section1 {
 	display: flex;
 	order: 0;
@@ -36,6 +44,10 @@ body {
 .section4 {
 	display: flex;
 	order: -1;
+}
+.section5 {
+	display: flex;
+	order: 30;
 }
 
 .card {
@@ -84,6 +96,11 @@ body {
 	height: 60ch;
 	width: 90ch;
 	background-position-y: 50%;
+}
+.section5 .card {
+	height: 60ch;
+	width: 90ch;
+	background-color: black;
 }
 @media (min-width: 451px) and (max-width: 927px) {
 	.section3 .card {
