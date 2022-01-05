@@ -2,8 +2,14 @@
 
 'use strict';
 
-let img, words;
-let changingParams = false;
+let img, a;
+
+const suggestion = [
+	'節奏快一點點喔',
+	'要畫甚麼就快點畫',
+	'又不是在選老公老婆',
+	'大家都在等你喔'
+];
 
 function preload() {
 	img = loadImage('background.png');
@@ -11,14 +17,12 @@ function preload() {
 
 function setup() {
 	createCanvas(img.width * 3, img.height * 3);
-	words = createGraphics(500, 500);
 	push();
 	scale(3);
 	image(img, 0, 0);
 	pop();
 
-	const pane = new Tweakpane.Pane({ title: '鍵盤操作提示' });
-
+	const pane = new Tweakpane.Pane({ title: '鍵盤操作' });
 	pane.addBlade({
 		view: 'text',
 		label: '顏色切換',
@@ -37,6 +41,16 @@ function setup() {
 		parse: v => String(v),
 		value: 'backspace'
 	});
+	pane.addSeparator();
+	const h = pane.addBlade({
+		view: 'text',
+		label: '小建議',
+		parse: v => String(v),
+		value: suggestion[0]
+	});
+	pane.disabled = true;
+	// h.hidden = true;
+	a = h;
 }
 
 let brushSize = 50;
@@ -62,15 +76,16 @@ function draw() {
 	}
 	lineDraw();
 	movementDetect();
-	if (counter >= 700) {
+	if (counter >= 100) {
 		saySomething();
+	} else {
+		a.value = suggestion[frameCount % 4];
+		a.hidden = true;
 	}
-	console.log(changingParams);
-	changingParams = false;
 }
 
 function saySomething() {
-	return true;
+	a.hidden = false;
 }
 
 function movementDetect() {
