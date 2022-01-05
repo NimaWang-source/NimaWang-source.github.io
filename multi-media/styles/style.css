@@ -49,6 +49,10 @@ video {
 	display: flex;
 	order: 30;
 }
+.section6 {
+	display: flex;
+	order: 50;
+}
 
 .card {
 	display: grid;
@@ -101,6 +105,14 @@ video {
 	height: 60ch;
 	width: 90ch;
 	background-color: black;
+}
+.section6 .card {
+	height: 60ch;
+	width: 40ch;
+	background-image: url(/foundamental_design/test3/background.png);
+}
+.section6 .card-title {
+	color: black;
 }
 @media (min-width: 451px) and (max-width: 927px) {
 	.section3 .card {
@@ -194,6 +206,15 @@ video {
 }
 
 .section2 .card-content {
+	padding: var(--padding);
+	background: linear-gradient(
+		hsl(0 0% 100%/ 0),
+		hsl(0 0% 100%/ 0.3) 20%,
+		hsl(0 0% 100%/ 1)
+	);
+}
+
+.section6 .card-content {
 	padding: var(--padding);
 	background: linear-gradient(
 		hsl(0 0% 100%/ 0),
