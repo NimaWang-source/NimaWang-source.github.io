@@ -76,7 +76,7 @@ function draw() {
 	}
 	lineDraw();
 	movementDetect();
-	if (counter >= 100) {
+	if (counter >= 500) {
 		saySomething();
 	} else {
 		a.value = suggestion[frameCount % 4];
